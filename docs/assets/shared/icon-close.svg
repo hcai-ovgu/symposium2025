@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="20" height="21" xmlns="http://www.w3.org/2000/svg">
+  <defs/>
+  <g fill="#D0D6F9" fill-rule="evenodd">
+    <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" style="fill: rgb(5, 9, 33);"/>
+    <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" style="fill: rgb(5, 9, 33);"/>
+  </g>
+</svg>
