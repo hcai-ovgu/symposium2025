@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <title>Event Promotion</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+  <script src="event-promotion.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+<script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.min.js';
+</script>
+
+</head>
+
+<body class="event-promotion">
+ 
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav> 
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="index.html">Home</a>
+            <li><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="speakers.html">Speaker</a>
+            <li><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="organisers.html">Organiser</a>
+            <li><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="https://hcai-ovgu.github.io/symposium2024/#program">Schedule</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="event-promotion.html">Promotion</a>
+            <li><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="https://hcai-ovgu.github.io/symposium2024/#venue" >Venue</a></li>
+            <li><a class="ff-sans-cond uppercase text-clr3 letter-spacing-2" href="https://hcai-ovgu.github.io/symposium2024/#contacts">Contacts</a></li>
+            
+
+           
+        </ul>
+    </nav>
+  </header>
+  
+  <main id="main" class="event-promotion-container">
+    <h1 class="page-title">Event Promotion</h1>
+
+    <div class="" style="padding:2rem; text-align:center; border-radius:12px;">
+      <h2 class="group-title text-clr2" style="margin-bottom:0.5rem;">Coming soon</h2>
+      <p class="fs-500 ff-sans-cond text-clr2">Our posters and flyers for 2025 are being prepared. Please check back shortly.</p>
+    </div>
+
+    <!-- Previous materials retained for reference
+    <section class="promotion-group">
+      <h2 class="group-title text-clr2">Posters and Flyers</h2>
+      <div class="promotion-list"> ... previous tiles ... </div>
+    </section>
+    -->
+  </main>
+
+  <!-- For sticky navbar -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.primary-header');
+    const navbarHeight = navbar.getBoundingClientRect().height;
+
+      window.addEventListener('scroll', function() {
+        const nav = document.querySelector('.primary-navigation');
+        if (window.scrollY > 50) { // Adjust scroll value as needed
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+            // Scrolling down & past the navbar
+            navbar.classList.add('nav-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('nav-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    // To show navbar when scrolling stops
+    let timer = null;
+    window.addEventListener('scroll', function() {
+        if(timer !== null) {
+            clearTimeout(timer);        
+        }
+        timer = setTimeout(function() {
+            navbar.classList.remove('nav-hidden');
+        }, 500); // Changed from 150 to 500 milliseconds
+    }, false);
+  </script>
+
+  <!-- Add this new script for PDF preview -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const pdfPreviews = document.querySelectorAll('.pdf-preview');
+      
+      pdfPreviews.forEach(function(preview) {
+        const pdfUrl = preview.dataset.pdf;
+        
+        pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+          pdf.getPage(1).then(function(page) {
+            const scale = 1.5;
+            const viewport = page.getViewport({ scale: scale });
+            
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            
+            const renderContext = {
+              canvasContext: context,
+              viewport: viewport
+            };
+            
+            page.render(renderContext);
+            preview.appendChild(canvas);
+          });
+        }).catch(function(error) {
+          console.error('Error loading PDF:', error);
+          preview.textContent = 'Error loading PDF preview';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
