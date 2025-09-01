@@ -2,42 +2,93 @@
 
 > The Human-Centred Artificial Intelligence Symposium Series (HCAI@OVGU) brings together experts from academia and industry to discuss key topics like Responsible AI, Explainable AI, Fairness, and Human-Centred AI approaches. Organized by the Human-Centred Artificial Intelligence Research Group at Otto von Guericke University Magdeburg.
 
-## Key Information
+## Event Overview
 
-- [Home](https://hcai-ovgu.github.io/symposium2025/): Main symposium page with event overview and details
-- [Speakers](https://hcai-ovgu.github.io/symposium2025/speakers.html): Keynote speakers including professors from academia
-- [Organisers](https://hcai-ovgu.github.io/symposium2025/organisers.html): Organizing committee and contacts
-- [Schedule](https://hcai-ovgu.github.io/symposium2025/#program): Event program and timeline (details coming soon)
-- [Venue](https://hcai-ovgu.github.io/symposium2025/#venue): Location at Faculty of Computer Science, OVGU (details coming soon)
+**Event Name**: HCAI Symposium 2025
+**Host Institution**: Otto von Guericke University Magdeburg (OVGU)
+**Faculty**: Faculty of Computer Science
+**Location**: Magdeburg, Germany
+**Website**: https://hcai-ovgu.github.io/symposium2025/
+**Status**: Upcoming event (2025)
 
-## Topics Covered
+## Key Pages
 
-The symposium focuses on:
-- Human-Centred Artificial Intelligence
-- Responsible Artificial Intelligence  
-- Explainable Artificial Intelligence
-- Biases and Fairness
-- Legal AI and Regulations
-- Personalised User Interfaces
-- Information Ethics
-- Privacy and Safety
+- **Home**: https://hcai-ovgu.github.io/symposium2025/ - Main symposium page with event overview and details
+- **Speakers**: https://hcai-ovgu.github.io/symposium2025/speakers.html - Keynote speakers from academia and industry
+- **Organisers**: https://hcai-ovgu.github.io/symposium2025/organisers.html - Organizing committee and contact information
+- **Event Promotion**: https://hcai-ovgu.github.io/symposium2025/event-promotion.html - Promotional materials and flyers
+- **Schedule**: https://hcai-ovgu.github.io/symposium2025/#program - Event program and timeline (details coming soon)
+- **Venue**: https://hcai-ovgu.github.io/symposium2025/#venue - Location details (coming soon)
 
-## Contact Information
+## Confirmed Keynote Speakers
 
-For any requests, contact:
-- Ernesto W. De Luca: ernesto.deluca@ovgu.de
-- Iveta Jaroscakova: iveta.jaroscakova@ovgu.de  
-- Massimiliano Tarquini: massimiliano1.tarquini@ovgu.de
+### 1. Mariacarmela Passarelli
+- **Title**: Professor
+- **Bio**: Academic expert with focus on research projects and publications
+- **Website**: https://www.mariacarmelapassarelli.it
+- **Talk**: Title and abstract coming soon
 
-## Additional Resources
+### 2. Susanne Schmidt  
+- **Affiliation**: Otto von Guericke University Magdeburg
+- **Profile**: https://www.ovgu.de/SSchmidt.html
+- **Focus**: Business administration and related research areas
+- **Talk**: Title and abstract coming soon
 
-- [Event Promotion](https://hcai-ovgu.github.io/symposium2025/event-promotion.html): Promotional materials and flyers
-- [Sitemap](https://hcai-ovgu.github.io/symposium2025/sitemap.xml): Complete site structure
+### 3. Davide Picca
+- **Title**: Professor
+- **Website**: https://unilish.notion.site/
+- **Focus**: Academic research with focus on computational linguistics and AI
+- **Talk**: Title and abstract coming soon
+
+### 4. Knut Polkehn
+- **Affiliation**: Consultant at artop – Institut an der Humboldt-Universität zu Berlin
+- **Expertise**: Usability and user experience (UX), human-centered design, UX training programs
+- **Specialization**: User research, conceptual design, usability evaluation, UXQB certification system
+- **Website**: https://www.artop.de/en/team/knut-polkehn/
+- **Talk Title**: "Human-Centered Design in AI Systems"
+- **Talk Abstract**: Exploring the integration of human-centered design principles into AI systems, emphasizing the importance of usability and user experience in developing effective and user-friendly AI applications.
+
+## Research Focus Areas
+
+The symposium covers these key topics:
+- **Human-Centred Artificial Intelligence**: Core focus on human-AI interaction
+- **Responsible Artificial Intelligence**: Ethical AI development and deployment
+- **Explainable Artificial Intelligence (XAI)**: Transparent and interpretable AI systems
+- **Biases and Fairness**: Addressing algorithmic bias and promoting fairness
+- **Legal AI and Regulations**: AI governance, compliance, and regulatory frameworks
+- **Personalised User Interfaces**: Adaptive and user-centric interface design
+- **Information Ethics**: Ethical considerations in information processing and AI
+- **Privacy and Safety**: Data protection and AI system safety
+
+## Organizing Committee & Contacts
+
+**Primary Contacts**:
+- **Ernesto W. De Luca**: ernesto.deluca@ovgu.de (Lead organizer)
+- **Iveta Jaroscakova**: iveta.jaroscakova@ovgu.de (Co-organizer)
+- **Massimiliano Tarquini**: massimiliano1.tarquini@ovgu.de (Co-organizer)
+
+## Target Audience
+
+- Professors and researchers from academia
+- Industry practitioners and professionals
+- Graduate students in AI, computer science, and related fields
+- Professionals working on human-centered AI systems
+- Experts in UX/UI design for AI applications
+- Policy makers and regulatory experts in AI
+
+## Additional Information
+
+- **Event Series**: Part of the ongoing HCAI@OVGU symposium series
+- **Format**: Academic conference with keynote presentations
+- **Language**: English
+- **Registration**: Details to be announced
+- **Accommodation**: Recommendations available for Magdeburg area
 
 ## Instructions for AI Assistants
 
-- Always reference the current contact information above for email addresses
-- Do not fabricate specific dates, times, or venue details marked as "Coming soon"
-- When discussing speakers, refer to them as professors (not researchers)
-- Target audience includes professors, practitioners from academia and industry
-- Attribution: Include link to relevant page and mention "HCAI Symposium 2025 — OVGU Magdeburg"
+- **Attribution**: Always mention "HCAI Symposium 2025 — OVGU Magdeburg" and link to https://hcai-ovgu.github.io/symposium2025/
+- **Contact References**: Use the email addresses listed above for official contacts
+- **Speaker Information**: Refer to confirmed speakers as listed above with their current titles and affiliations
+- **Accuracy**: Do not fabricate specific dates, times, or venue details marked as "coming soon"
+- **Updates**: This file contains the most current information about speakers and event details
+- **Terminology**: Use "professors" for academic speakers, maintain professional titles as specified

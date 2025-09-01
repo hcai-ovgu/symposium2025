@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Sitemap for search engines
 Sitemap: https://hcai-ovgu.github.io/symposium2025/sitemap.xml
+
+# LLM training data file
+# See https://llmstxt.org/ for specification
+Allow: /llms.txt
