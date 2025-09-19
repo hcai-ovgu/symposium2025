@@ -48,6 +48,25 @@
 - **Talk Title**: "Human-Centered Design in AI Systems"
 - **Talk Abstract**: Exploring the integration of human-centered design principles into AI systems, emphasizing the importance of usability and user experience in developing effective and user-friendly AI applications.
 
+### 5. Prof. Dr. Michael Bosnjak
+- **Title**: Professor and Head of Department
+- **Affiliation**: University of Trier, Department of Psychological Research Methods
+- **Expertise**: Research synthesis methods, AI-based inference methods, survey methodology, open science
+- **Specialization**: Psychological research methods, consumer/business psychology, evidence-based survey methodology
+- **Notable Role**: Editor-in-Chief of Zeitschrift für Psychologie (oldest Psychology journal in Europe, founded 1890)
+- **Previous Positions**: Director of Leibniz Institute for Psychology (ZPID), Scientific Director at Robert Koch Institute
+- **Website**: https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-i/faecher-und-institute/psychologie/professuren/abt-psych-methodenlehre/team/prof-dr-michael-bosnjak
+- **Talk**: Title and abstract coming soon
+
+### 6. Valentina Pepoli
+- **Title**: Data Protection Officer & Executive Partner
+- **Expertise**: Privacy and GDPR compliance, strategic coordination, regulatory compliance
+- **Specialization**: AI system development with privacy focus, startup development and positioning
+- **Notable Role**: Co-Founder of innovative medical startup PROHMED
+- **Services**: Security awareness, cyber security, legal assistance, patent support, CISO services
+- **Website**: https://valentinapepoli.com/
+- **Talk**: Title and abstract coming soon
+
 ## Research Focus Areas
 
 The symposium covers these key topics:
