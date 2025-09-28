@@ -18,7 +18,7 @@
 - **Organisers**: https://hcai-ovgu.github.io/symposium2025/organisers.html - Organizing committee and contact information
 - **Event Promotion**: https://hcai-ovgu.github.io/symposium2025/event-promotion.html - Promotional materials and flyers
 - **Schedule**: https://hcai-ovgu.github.io/symposium2025/#program - Event program and timeline (details coming soon)
-- **Venue**: https://hcai-ovgu.github.io/symposium2025/#venue - Location details (coming soon)
+- **Venue**: https://hcai-ovgu.github.io/symposium2025/#venue - Experimentelle Fabrik Magdeburg venue details
 
 ## Confirmed Keynote Speakers
 
@@ -81,10 +81,18 @@ The symposium covers these key topics:
 
 ## Organizing Committee & Contacts
 
-**Primary Contacts**:
-- **Ernesto W. De Luca**: ernesto.deluca@ovgu.de (Lead organizer)
-- **Iveta Jaroscakova**: iveta.jaroscakova@ovgu.de (Co-organizer)
-- **Massimiliano Tarquini**: massimiliano1.tarquini@ovgu.de (Co-organizer)
+**General Chair**:
+- **Ernesto W. De Luca**: ernesto.deluca@ovgu.de (Full Professor, Otto von Guericke University Magdeburg)
+
+**Local Organizing Committee**:
+- **Massimiliano Tarquini**: massimiliano1.tarquini@ovgu.de (Scientific Collaborator, Institut für Technische und Betriebliche Informationssysteme (ITI), AG Human-Centred Artificial Intelligence, Otto von Guericke University Magdeburg)
+- **Iveta Jaroscakova**: iveta.jaroscakova@ovgu.de (Innovation Experience Incubator Coordinator, Otto von Guericke University Magdeburg)
+
+**Student Volunteer**:
+- **Het Darshan Mehta**: Student, Otto von Guericke University Magdeburg
+
+**Web Chair**:
+- **Kartik Suru**: Student of Digital Engineering, Otto von Guericke University Magdeburg
 
 ## Target Audience
 
@@ -94,6 +102,12 @@ The symposium covers these key topics:
 - Professionals working on human-centered AI systems
 - Experts in UX/UI design for AI applications
 - Policy makers and regulatory experts in AI
+
+## Venue Information
+
+- **Venue**: Experimentelle Fabrik Magdeburg
+- **Organization**: ZPVP GmbH – Zentrum für Produkt-, Verfahrens- und Prozessinnovation GmbH
+- **Address**: Sandtorstr. 23, 39106 Magdeburg, Germany
 
 ## Additional Information
 
