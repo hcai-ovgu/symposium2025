@@ -1,3 +1,15 @@
+.sponsor-card {
+  background: rgb(251, 251, 252); /* lighter, more white */
+  border: 1px solid rgba(9, 4, 4, 0.922);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.sponsor-logo { max-height: 90px; width: auto; }
 /* ------------------- */
 /* Custom properties   */
 /* ------------------- */
@@ -964,9 +976,7 @@ body {
 
 }
 
-.text-2{
-
-}
+.text-2{ padding: 0; }
 
 
 .topics{
@@ -1670,6 +1680,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+.registration {
+  background: #1b0143; /* match site bg */
+  padding: 5% 0;
+}
+
+.registration .section-header h2,
+.registration .section-header p {
+  color: #FAF9F6; /* ensure readable on dark */
+}
+
+.registration .section-header {
+  text-align: center; /* center text horizontally */
+}
+
 
 /* Add or modify these styles in your existing CSS file */
 
@@ -1792,6 +1816,10 @@ body {
 }
 
 /* Add or modify these styles in your index.css file */
+.section-title { color: #FAF9F6; font-family: 'Bellefair', serif; }
+.section-subtitle { color: #D0D6F9; font-family: 'Barlow', sans-serif; }
+
+.sponsor-logo { max-height: 80px; filter: none; }
 
 .speaker-list {
   display: flex;
@@ -1801,7 +1829,7 @@ body {
 
 .speaker-item {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 320px 1fr; /* restore wider left column */
   gap: 1.25rem;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 16px;
@@ -1825,7 +1853,7 @@ body {
 }
 
 .speaker-image-container {
-  width: 240px;
+  width: 240px;   /* restore image size for balance */
   height: 240px;
   overflow: hidden;
   border-radius: 12px;
@@ -1841,7 +1869,7 @@ body {
 
 .speaker-info {
   flex: none;
-  text-align: center;
+  text-align: left; /* left align bio */
 }
 
 .speaker-info h3 {
@@ -1849,21 +1877,63 @@ body {
   font-size: 1.5rem;
 }
 
-.speaker-info p {
+/* Short bio snippet */
+.speaker-bio {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+  display: -webkit-box;
+  line-clamp: 2; /* standard property */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* short teaser */
+  overflow: hidden;
 }
 
-.speaker-link {
-  display: inline-block;
+/* Expanded bio state toggled via JS */
+/* Full bio appears when toggled */
+.speaker-bio-full {
   margin-top: 0.5rem;
-  color: #232054;
+  line-height: 1.5;
+}
+
+/* Read more button styling */
+.read-more-btn {
+  background: transparent;
+  color: #D0D6F9;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.read-more-btn:hover,
+.read-more-btn:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Unified action styles (Read more + Website) */
+.speaker-info .read-more-btn,
+.speaker-info .speaker-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.9rem; /* ensure identical text size */
+  line-height: 1.1;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: #D0D6F9; /* light text on dark background */
   text-decoration: none;
 }
 
-.speaker-link:hover {
-  text-decoration: underline;
+.speaker-info .read-more-btn:hover,
+.speaker-info .read-more-btn:focus,
+.speaker-info .speaker-link:hover,
+.speaker-info .speaker-link:focus {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .speaker-right {
@@ -1949,14 +2019,17 @@ body {
   .speaker-image-container {
     margin-right: 0;
     margin-bottom: 1rem;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   .speaker-right {
     border-left: none;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
+
+  /* Allow a bit more bio on small screens for readability */
+  .speaker-bio { line-clamp: 4; -webkit-line-clamp: 4; }
 }
 
 /* Customizing scrollbar for Webkit browsers */
