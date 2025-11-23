@@ -52,18 +52,45 @@
   <main id="main" class="event-promotion-container">
     <h1 class="page-title">Event Promotion</h1>
 
-    <div class="" style="padding:2rem; text-align:center; border-radius:12px;">
-      <h2 class="group-title text-clr2" style="margin-bottom:0.5rem;">Coming soon</h2>
-      <p class="fs-500 ff-sans-cond text-clr2">Our posters and flyers for 2025 are being prepared. Please check back shortly.</p>
-    </div>
-
-    <!-- Previous materials retained for reference
     <section class="promotion-group">
-      <h2 class="group-title text-clr2">Posters and Flyers</h2>
-      <div class="promotion-list"> ... previous tiles ... </div>
+      <h2 class="group-title text-clr2">Promotional Materials</h2>
+      <p class="fs-500 ff-sans-cond text-clr2" style="text-align:center; margin-bottom:2rem;">Download our flyer and poster for HCAI Symposium 2025</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <!-- Flyer -->
+        <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 1.5rem; text-align: center; border: 2px solid rgba(102, 126, 234, 0.3);">
+          <div class="pdf-preview-container" style="margin-bottom: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 10px; padding: 1rem; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+            <canvas id="flyer-preview" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></canvas>
+          </div>
+          <h3 class="ff-serif" style="color: white; margin-bottom: 0.5rem; font-size: 1.5rem;">📄 Event Flyer</h3>
+          <p class="ff-sans-cond" style="color: #d0d6f9; margin-bottom: 1.5rem; font-size: 0.9rem;">Official symposium flyer with complete details</p>
+          <a href="assets/Event promotion/flyer-hcai-251118.pdf" download class="ff-sans-cond download-btn" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; transition: all 0.3s ease; font-weight: 600;">
+            <i class="fa fa-download"></i> Download Flyer
+          </a>
+        </div>
+
+        <!-- Poster -->
+        <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 1.5rem; text-align: center; border: 2px solid rgba(102, 126, 234, 0.3);">
+          <div class="pdf-preview-container" style="margin-bottom: 1.5rem; background: rgba(0,0,0,0.3); border-radius: 10px; padding: 1rem; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+            <canvas id="poster-preview" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"></canvas>
+          </div>
+          <h3 class="ff-serif" style="color: white; margin-bottom: 0.5rem; font-size: 1.5rem;">📌 Event Poster</h3>
+          <p class="ff-sans-cond" style="color: #d0d6f9; margin-bottom: 1.5rem; font-size: 0.9rem;">Full symposium poster for printing and sharing</p>
+          <a href="assets/Event promotion/flyer-hcai-symposium-251118-einzelseiten.pdf" download class="ff-sans-cond download-btn" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; transition: all 0.3s ease; font-weight: 600;">
+            <i class="fa fa-download"></i> Download Poster
+          </a>
+        </div>
+      </div>
     </section>
-    -->
   </main>
+  
+  <style>
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    }
+  </style>
 
   <!-- Footer -->
   <footer id="footer" class="site-footer">
@@ -156,23 +183,22 @@
     }, false);
   </script>
 
-  <!-- Add this new script for PDF preview -->
+  <!-- PDF Preview Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const pdfPreviews = document.querySelectorAll('.pdf-preview');
+      // Flyer Preview
+      const flyerUrl = 'assets/Event promotion/flyer-hcai-251118.pdf';
+      const flyerCanvas = document.getElementById('flyer-preview');
       
-      pdfPreviews.forEach(function(preview) {
-        const pdfUrl = preview.dataset.pdf;
-        
-        pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+      if (flyerCanvas) {
+        pdfjsLib.getDocument(flyerUrl).promise.then(function(pdf) {
           pdf.getPage(1).then(function(page) {
-            const scale = 1.5;
+            const scale = 1.2;
             const viewport = page.getViewport({ scale: scale });
             
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
+            const context = flyerCanvas.getContext('2d');
+            flyerCanvas.height = viewport.height;
+            flyerCanvas.width = viewport.width;
             
             const renderContext = {
               canvasContext: context,
@@ -180,13 +206,39 @@
             };
             
             page.render(renderContext);
-            preview.appendChild(canvas);
           });
         }).catch(function(error) {
-          console.error('Error loading PDF:', error);
-          preview.textContent = 'Error loading PDF preview';
+          console.error('Error loading flyer:', error);
+          flyerCanvas.parentElement.innerHTML = '<p style="color: #d0d6f9;">Preview not available</p>';
         });
-      });
+      }
+      
+      // Poster Preview
+      const posterUrl = 'assets/Event promotion/flyer-hcai-symposium-251118-einzelseiten.pdf';
+      const posterCanvas = document.getElementById('poster-preview');
+      
+      if (posterCanvas) {
+        pdfjsLib.getDocument(posterUrl).promise.then(function(pdf) {
+          pdf.getPage(1).then(function(page) {
+            const scale = 1.2;
+            const viewport = page.getViewport({ scale: scale });
+            
+            const context = posterCanvas.getContext('2d');
+            posterCanvas.height = viewport.height;
+            posterCanvas.width = viewport.width;
+            
+            const renderContext = {
+              canvasContext: context,
+              viewport: viewport
+            };
+            
+            page.render(renderContext);
+          });
+        }).catch(function(error) {
+          console.error('Error loading poster:', error);
+          posterCanvas.parentElement.innerHTML = '<p style="color: #d0d6f9;">Preview not available</p>';
+        });
+      }
     });
   </script>
 </body>
